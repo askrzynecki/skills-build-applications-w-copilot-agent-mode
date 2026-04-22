@@ -21,13 +21,14 @@
       "name": "Launch React Frontend",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/react-scripts/scripts/start.js",
+      "program": "${workspaceFolder}/octofit-tracker/frontend/node_modules/.bin/react-scripts",
+      "args": ["start"],
       "cwd": "${workspaceFolder}/octofit-tracker/frontend",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "port": 3000,
+      "protocol": "inspector",
+      "port": 9229,
       "env": {
-        "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}"
+        "REACT_APP_CODESPACE_NAME": "${env:CODESPACE_NAME}",
+        "PORT": "3000"
       }
     }
   ]
